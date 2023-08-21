@@ -25,6 +25,22 @@
       color: white;
       cursor: pointer;
     }
+
+    @keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hidden-card {
+  animation: slide-in 0.5s forwards; /* Menjalankan animasi slide-in selama 0.5 detik */
+}
+
   </style>
   
   <meta charset="UTF-8">
@@ -84,7 +100,7 @@
           </div>
           <div class="row">
             <div class="col-lg-4">
-              <div class="card mb-4">
+              <div class="card mb-4 hidden-card">
                 <div class="card-body text-center">
                   <img src= "img/329026442_1539933913149566_600992706646088038_n.jpg" alt="avatar"
                   class="rounded-circle img-fluid" style="width: 150px;">
@@ -97,7 +113,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card mb-4 mb-lg-0">
+              <div class="card mb-4 hidden-card mb-lg-0">
                 <div class="card-body p-0">
                   <ul class="list-group list-group-flush rounded-3">
                     <li class="list-group-item d-flex justify-content-center align-items-center p-3">
@@ -129,7 +145,7 @@
               </div>
             </div>
             <div class="col-lg-8">
-              <div class="card mb-4">
+              <div class="card mb-4 hidden-card">
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
