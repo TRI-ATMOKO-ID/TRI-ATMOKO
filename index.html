@@ -264,19 +264,18 @@
     </audio>
     <button id="toggleMusic">Pause Music</button>
   </div>
-
+  
   <script>
-    const backgroundMusic = document.querySelector('audio');
-    const toggleMusicButton = document.getElementById('toggleMusic');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+    const playMusicButton = document.getElementById('playMusic');
+    const pauseMusicButton = document.getElementById('pauseMusic');
 
-    toggleMusicButton.addEventListener('click', () => {
-      if (backgroundMusic.paused) {
-        backgroundMusic.play();
-        toggleMusicButton.textContent = 'Pause Music';
-      } else {
-        backgroundMusic.pause();
-        toggleMusicButton.textContent = 'Play Music';
-      }
+    playMusicButton.addEventListener('click', () => {
+      backgroundMusic.play();
+    });
+
+    pauseMusicButton.addEventListener('click', () => {
+      backgroundMusic.pause();
     });
   </script>
 </div>
