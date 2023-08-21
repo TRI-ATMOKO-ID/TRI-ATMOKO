@@ -2,7 +2,29 @@
 <html lang="en">
 <head>
   <style>
-    
+    .music-player {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .music-player audio {
+      width: 200px;
+      margin-right: 10px;
+    }
+
+    .music-player button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
   </style>
   
   <meta charset="UTF-8">
@@ -46,9 +68,6 @@
   </style>
 </head>
 <body>
-  <audio loop autoplay controls>
-    <source src="Damon Empero ft. Veronica -  Vacation _ Tropical House _.mp3" type="audio/mpeg">
-  </audio>
   <section class="py-5">
     <div class="container">
       <!-- Your existing HTML content here -->
@@ -239,6 +258,27 @@
     </div>
   </div>
 </section>
+  <div class="music-player">
+    <audio loop autoplay controls>
+      <source src="Damon Empero ft. Veronica - Vacation _ Tropical House _.mp3" type="audio/mpeg">
+    </audio>
+    <button id="toggleMusic">Pause Music</button>
+  </div>
+
+  <script>
+    const backgroundMusic = document.querySelector('audio');
+    const toggleMusicButton = document.getElementById('toggleMusic');
+
+    toggleMusicButton.addEventListener('click', () => {
+      if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        toggleMusicButton.textContent = 'Pause Music';
+      } else {
+        backgroundMusic.pause();
+        toggleMusicButton.textContent = 'Play Music';
+      }
+    });
+  </script>
 </div>
 </section>
 
