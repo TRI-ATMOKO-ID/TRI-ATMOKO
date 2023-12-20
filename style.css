@@ -83,6 +83,70 @@ body {
   border-bottom: 1px solid #e9ecef;
 }
 
+  /* Styling for Galeri Materi */
+.galeri-materi .card {
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Sesuaikan ukuran card */
+  width: 100%; /* Sesuaikan lebar card */
+  padding: 20px; /* Sesuaikan padding card */
+  margin-bottom: 20px; /* Sesuaikan margin antar card */
+}
+
+.galeri-materi .card-body {
+  text-align: center;
+}
+
+.galeri-materi .card-body img {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.galeri-materi .card-body h5 {
+  margin: 0.5rem 0;
+}
+
+.galeri-materi .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  margin-right: 0.5rem;
+}
+
+.galeri-materi .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 30px;
+}
+
+/* Styling for the progress bars */
+.galeri-materi .progress {
+  background-color: #e9ecef;
+  border-radius: 30px;
+  height: 10px;
+  margin-bottom: 1rem;
+}
+
+.galeri-materi .progress-bar {
+  background-color: #007bff;
+  border-radius: 30px;
+}
+
+/* Styling for the list group */
+.galeri-materi .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+}
+
+
 /* Additional styling for responsiveness */
 @media (max-width: 767.98px) {
   .col-lg-4, .col-lg-8 {
