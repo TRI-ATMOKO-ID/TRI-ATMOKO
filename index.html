@@ -1,311 +1,290 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <style>
-    .music-player {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .music-player audio {
-      width: 200px;
-      margin-right: 10px;
-    }
-
-    .music-player button {
-      background-color: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
-    }
-
-    @keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.hidden-card {
-  animation: slide-in 1.5s forwards; /* Menjalankan animasi slide-in selama 0.5 detik */
-}
-
-.copyright a {
-  color: #ffff00;
-}
-  </style>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/329026442_1539933913149566_600992706646088038_n.jpg">
-  <link rel="icon" type="image/png" href="img/329026442_1539933913149566_600992706646088038_n.jpg">
-  <title>TRI ATMOKO</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <style>
-  /* Your custom styles here */
-  body {
-    background-color: black;
-  }
-
-  .breadcrumb {
-    background-color: transparent;
-  }
-
-  .card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .card-body img {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .btn-primary, .btn-outline-primary {
-    border-radius: 30px;
-  }
-
-  .progress, .list-group-item {
-    border-radius: 30px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutia Wati | Portofolio Web Developer</title>
+    
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuat Font Awesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Konfigurasi Tailwind & Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- CSS Kustom -->
+    <style>
+        /* Mengatur font Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        /* Style untuk link navigasi yang aktif */
+        .nav-link.active {
+            color: #3b82f6; /* biru-500 */
+        }
+        
+        /* Animasi fade-in sederhana */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body>
-  <section class="py-5">
-    <div class="container">
-      <!-- Your existing HTML content here -->
-      <section style="background-color: #26747e;">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col">
-              <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-                <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item active" aria-current="page"><b>PROFIL TRI ATMOKO</b></li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-36">
-              <div class="card mb-4 hidden-card">
-                <div class="card-body text-center">
-                  <img src= "img/329026442_1539933913149566_600992706646088038_n.jpg" alt="avatar"
-                  class="rounded-circle img-fluid" style="width: 150px;">
-                  <h5 class="my-3">TRI ATMOKO</h5>
-                  <p class="text-muted mb-1">Mahasiswa STAI SUSHA SIAK</p>
-                  <p class="text-muted mb-4">Siak, Pekanbaru, Riau</p>
-                   <div class="d-flex justify-content-center mb-2">
-                    <button type="button" class="btn btn-outline-primary ms-1"><a href="https://www.instagram.com/tri_atmoko_01">Follow</a></button>
-                    <button type="button" class="btn btn-outline-primary ms-1"><a href="https://wa.link/99yi2w">Message</a></button>
-                  </div>
-                </div>
-              </div>
-              </div>
-            <div class="row">
-              <div class="col-md-36">
-              <div class="card mb-4 hidden-card mb-lg-0">
-                <div class="card-body p-0">
-                  <ul class="list-group list-group-flush rounded-3">
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg text-warning"></i>
-                      <p class="mb-0"><b>Sosial Media :</b></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg" style="color: #333333;"></i>
-                      <p class="mb-0"><a href="https://www.facebook.com/100051186136279" type="button">Facebook</a></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg" style="color: #55acee;"></i>
-                      <p class="mb-0"><a href="https://www.instagram.com/tri_atmoko_01">Instagram</a></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg" style="color: #ac2bac;"></i>
-                      <p class="mb-0"><a href="https://www.threads.net/@tri_atmko_01">Threads</a></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg" style="color: #3b5998;"></i>
-                      <p class="mb-0"><a href="https://www.youtube.com/@TRI_ATMOKO_ID">Youtube</a></p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-center align-items-center p-3">
-                      <i class="fa-lg" style="color: #3b5998;"></i>
-                      <p class="mb-0"><a href="https://www.trakteer.id/tri-atmoko-id">Trakteer</a></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            </div>
-          </div>
-            <div class="row">
-              <div class="col-md-36">
-              <div class="card mb-4 hidden-card">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0"><b>Nama Lengkap</b></p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">TRI ATMOKO</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0"><b>Email</b></p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">triatmoko19@sma.belajar.id</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0"><b>WhatsApp</b></p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">+62 852-1508-4951</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0"><b>No HP</b></p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">+62 859-3486-1212</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0"><b>Alamat</b></p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Kec. Bungaraya, Kab. Siak , Riau</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card mb-4 mb-md-0">
-                  <div class="card-body">
-                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                    </p>
-                    <p class="mb-1" style="font-size: .77rem;">Instagram Followers</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                    <div class="progress rounded mb-2" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-4 mb-md-0">
-                  <div class="card-body">
-                    <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                    </p>
-                    <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                    <div class="progress rounded" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                    <div class="progress rounded mb-2" style="height: 5px;">
-                      <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  <div class="copyright text-center text-sm text-muted text-lg-start">
+<body class="bg-gray-900 text-gray-100">
 
-                    © <script>
-                    document.write(new Date().getFullYear())
-                  </script>
-                  made with <i class="fa fa-heart"></i> by
-                  <a href="https://wa.me/6285215084951" class="font-weight-bold" target="_blank">TRI ATMOKO</a>
-                </div>
-              </div>
+    <!-- Header & Navigasi -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
+                Mutia Wati
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-300 hover:text-blue-400 transition-colors active">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">About</a>
+                <a href="#portfolio" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
             </div>
-          </div>
+            <!-- Tombol Menu Mobile (fungsionalitas bisa ditambahkan dengan JS) -->
+            <button class="md:hidden text-gray-300">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+
+        <!-- Bagian Home (Hero) -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-gray-900 pt-16">
+            <div class="flex flex-col items-center px-6">
+                <img 
+                    src="https://placehold.co/200x200/4a5568/ffffff?text=Mutia" 
+                    alt="Foto Profil Mutia Wati" 
+                    class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-blue-500 shadow-xl mb-6"
+                >
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-3">Mutia Wati</h1>
+                <p class="text-xl md:text-2xl text-blue-300 font-light mb-8">Web Developer</p>
+                
+                <!-- Ikon Sosial Media -->
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="GitHub">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="Instagram">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian About Me -->
+        <section id="about" class="py-20 md:py-32 bg-gray-800 fade-in-section">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+                <p class="text-lg text-gray-300 leading-relaxed mb-8">
+                    Halo! Saya Mutia, seorang web developer yang bersemangat dalam menciptakan aplikasi web yang fungsional, bersih, dan ramah pengguna. Saya memiliki pengalaman dengan berbagai teknologi modern dan selalu antusias untuk belajar hal-hal baru di dunia pengembangan web.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-12">
+                    Saya percaya bahwa teknologi dapat memecahkan masalah nyata. Mari kita berkolaborasi untuk membangun sesuatu yang luar biasa!
+                </p>
+                <a href="#" class="bg-blue-600 text-white font-medium py-3 px-8 rounded-lg text-lg hover:bg-blue-700 transition-all shadow-lg transform hover:scale-105">
+                    <i class="fas fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian Portfolio -->
+        <section id="portfolio" class="py-20 md:py-32 bg-gray-900 fade-in-section">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">My Portfolio</h2>
+                
+                <!-- Grid Proyek -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Kartu Proyek 1 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/3182ce/ffffff?text=Project+1" alt="Gambar Proyek 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Nama Proyek Satu</h3>
+                            <p class="text-gray-300 mb-4">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan apa tujuannya.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Proyek 2 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/38a169/ffffff?text=Project+2" alt="Gambar Proyek 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Nama Proyek Dua</h3>
+                            <p class="text-gray-300 mb-4">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan apa tujuannya.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Proyek 3 -->
+                    <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://placehold.co/600x400/d53f8c/ffffff?text=Project+3" alt="Gambar Proyek 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-white mb-2">Nama Proyek Tiga</h3>
+                            <p class="text-gray-300 mb-4">Deskripsi singkat tentang proyek ini, teknologi yang digunakan, dan apa tujuannya.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Lihat Detail &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Anda bisa menambahkan lebih banyak kartu proyek di sini -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Contact -->
+        <section id="contact" class="py-20 md:py-32 bg-gray-800 fade-in-section">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">Contact Me</h2>
+                
+                <form id="contact-form" class="bg-gray-900 p-8 rounded-lg shadow-xl">
+                    <div id="form-success" class="hidden bg-green-500 text-white p-4 rounded-lg mb-6">
+                        Pesan Anda telah terkirim. Terima kasih!
+                    </div>
+                    <div class="mb-5">
+                        <label for="name" class="block text-gray-300 mb-2 font-medium">Nama</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 text-white focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block text-gray-300 mb-2 font-medium">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 text-white focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-300 mb-2 font-medium">Pesan</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 text-white focus:outline-none focus:border-blue-500" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white font-medium py-3 px-10 rounded-lg text-lg hover:bg-blue-700 transition-all shadow-lg transform hover:scale-105">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <!-- Ikon Sosial Media -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="GitHub">
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition-transform hover:scale-125" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Mutia Wati. All rights reserved.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <div class="music-player">
-    <audio loop autoplay controls>
-      <source src="Damon Empero ft. Veronica -  Vacation _ Tropical House _.mp3" type="audio/mpeg">
-    </audio>
-    <button id="toggleMusic">Pemutar Musik</button>
-  </div>
-  
-  <script>
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    const playMusicButton = document.getElementById('playMusic');
-    const pauseMusicButton = document.getElementById('pauseMusic');
+    </footer>
 
-    playMusicButton.addEventListener('click', () => {
-      backgroundMusic.play();
-    });
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // Set Tahun Copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
 
-    pauseMusicButton.addEventListener('click', () => {
-      backgroundMusic.pause();
-    });
-  </script>
-</div>
-</section>
+            // --- Navigasi Aktif saat Scroll ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // 50% bagian terlihat
+            };
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Animasi Fade-in saat Scroll ---
+            const fadeSections = document.querySelectorAll('.fade-in-section');
+            
+            const fadeObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 }); // 10% bagian terlihat
+
+            fadeSections.forEach(section => {
+                fadeObserver.observe(section);
+            });
+
+            // --- Penanganan Form Kontak ---
+            const contactForm = document.getElementById('contact-form');
+            const formSuccess = document.getElementById('form-success');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Mencegah submit form sungguhan
+                
+                // Di sini Anda biasanya akan mengirim data ke backend
+                // Untuk demo ini, kita hanya tampilkan pesan sukses
+                
+                formSuccess.classList.remove('hidden'); // Tampilkan pesan
+                contactForm.reset(); // Kosongkan form
+
+                // Sembunyikan pesan setelah beberapa detik
+                setTimeout(() => {
+                    formSuccess.classList.add('hidden');
+                }, 5000);
+            });
+
+        });
+    </script>
+
 </body>
 </html>
